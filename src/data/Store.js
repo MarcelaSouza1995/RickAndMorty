@@ -17,11 +17,12 @@ const Store = ({ children }) => {
 
   const [data, setData] = useState(initialState);
   const [filters, setFilters] = useState(initialStateFilters);
+  const [count, setCount] = useState(2);
 
 
   useEffect(() => {
     async function funcGet() {
-      const dados = await getApi(50);
+      const dados = await getApi(1);
       setData({
         ...data,
         state: dados,
@@ -39,7 +40,7 @@ const Store = ({ children }) => {
     }));
   }, [filters]);
 
-const globalState = { data, filters, setFilters }
+const globalState = { data, filters, setFilters, setData, count, setCount };
 
 return (
   <DataContext.Provider value={ globalState }>
