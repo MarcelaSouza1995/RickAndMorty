@@ -7,9 +7,11 @@ const Card = ({person}) => {
   return(
 
       <BoxCards >
+        <div className="containerTexto">
         <Titulo>{person.name}</Titulo>
-        <Imagem src={ person.image} alt="imagem"></Imagem>
-        <Button><Link to={ `/${ person.id }` }>Details</ Link></Button>
+        </div>
+        <Imagem src={ person.image} alt="imagem"></Imagem>        
+        <Button className="btn third"><Link to={ `/${ person.id }` }>Details</ Link></Button>
       </BoxCards>
    
 

@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { FiChevronsLeft } from "@react-icons/all-files/fi/FiChevronsLeft";
 import {Button} from '../styles/ComponentesStyles';
 import DataContext from '../data/DataContext';
 import getApi from  '../services/api';
@@ -17,10 +18,10 @@ const PrevButton = () => {
 
   return(
   <Button 
-  type="button" 
+  type="button"
   onClick={() => { setCount((state) => count -1);prevClick(count)} } 
   disabled={ count <= 2 }>
-    Prev
+    <FiChevronsLeft />
   </Button>)
 }
 

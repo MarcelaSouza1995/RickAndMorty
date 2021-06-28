@@ -1,4 +1,8 @@
 import React, { useContext } from 'react';
+import {  FiChevronsRight  } from "@react-icons/all-files/fi/FiChevronsRight";
+
+
+
 import {Button} from '../styles/ComponentesStyles';
 import DataContext from '../data/DataContext';
 import getApi from  '../services/api';
@@ -15,10 +19,10 @@ const NextButton = () => {
 
   return(
   <Button 
-  type="button" 
+  type="button"
   onClick={() => { setCount((state) => count + 1) ; nextClick(count) } } 
   disabled={ count >= 35 }>
-    Next
+   <FiChevronsRight />
   </Button>)
 }
 

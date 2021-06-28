@@ -1,63 +1,128 @@
 import styled from 'styled-components';
 
 export const Button = styled.button`
-  color: rgb(1,1,1);
-  font-size: 1em;
-  margin: 1em;
-  padding: 0.25em 1em;
-  border: 2px solid black;
-  border-radius: 3px;
-  background-color:green;
-  width:80%;
 
-  :disabled {
-    background-color: rgb(1,1,1,0.5)
+  a{
+    text-decoration:none;
+    color: black;
   }
 `;
 
 export const Titulo = styled.h1`
- color:black;
- font-size: 100%;
+ font-family: sans-serif;
+ color: #579dcc;
+ font-size: 1em;
  text-align: center;
+ margin: 5%;
+ text-shadow:rgb(86, 152, 65) 4px 4px 5px;
+ -webkit-text-stroke-width: 0.8px; /* largura da borda */
+ -webkit-text-stroke-color: #000;
+
 `;
 
 export const Container = styled.div`
+width: 100%;
 display: flex;
-flex-direction: row;
 flex-wrap: wrap;
 justify-content:center;
-
-@media (max-width: 760) {
-  display:flex;
-  flex-direction: column;
-}
+align-items:center;
 `;
 
 export const ContainerDetails = styled.div`
 display: flex;
 flex-direction: column;
+align-items:center;
+justify-content:center;
+width: 100%;
 
-img{
-  width:100px
+h1{
+  color: rgb(255,255,255, 0.8);
+  font-family: sans-serif;
+  text-shadow:rgb(86, 152, 65) 4px 4px 5px;
+  margin: 2%;
 }
+
+a{
+  font-size: 250%;
+  color: rgb(255,255,255, 0.8);
+  margin: 5%;
+}
+`;
+
+export const BoxContainer = styled.div`
+display: flex;
+
+@media (max-width: 780px) {
+  flex-direction: column;
+}
+`;
+
+export const DetailsSpan = styled.div`
+display: flex;
+flex-direction: column;
+color: rgb(255,255,255, 0.5);
+font-size: 20px;
+margin-top: 20%;
+font-family: sans-serif;
+
+@media (max-width: 780px){
+  margin: 5%;
+}
+`;
+
+export const BasicDetail = styled.div`
+display: flex;
+flex-direction: column;
+margin-right: 10%;
+align-items: center;
+align-content: center;
 `;
 
 export const Imagem = styled.img`
 width: 50%;
 height: auto;
 border-radius:50%;
+box-shadow: 10px 5px 5px black;
+`;
+
+
+export const ImagemDetail = styled.img`
+width: 100%;
+height: auto;
+border-radius:50%;
+box-shadow: 10px 5px 5px black;
+margin: 3%;
+
+@media (max-width: 780px){
+  width: 70%;
+}
 `;
 
 export const BoxCards = styled.div`
-width:15%;
+width:18%;
 display:flex;
 flex-direction: column;
 align-items: center;
 border-radius:10px;
 align-content:center;
-margin: 2px;
-background-color: rgb(1,1,1,0.1)`
-;
+margin: 0.5%;
+border: 2px solid rgb(255,255,255,0.9);
+background-color: rgb(255,255,255,0.7);
+
+@media (max-width: 780px){
+  width:40%;
+  margin: 2%;
+
+  button{
+    width:90%;
+
+    a{
+      text-align: center;
+      font-size: 80%;
+    }
+  }
+}
+`;
 
 export const GroupButtons = styled.div`
 display: flex;
@@ -65,16 +130,30 @@ flex-direction: row;
 border-radius: 10px;
 margin: 2%;
 padding:2%;
-border: 1px solid gray;
 
 button{
   margin: 0px;
   border: none;
+  border-radius:0px;
+  background-color: transparent;
+  font-size: 500%;
+  color: white;
+
+  :disabled {
+    color: grey;
+  }
 }
 `;
 
 export const ImagemHeader = styled.img`
-width:50vw;
+width: 50vw;
 height:300px;
 margin:0px;
+margin-top: -40px;
+
+@media (max-width: 780px){
+  width: 60vw;
+  margin: -40px 20px;
+  padding: 0px 20px;
+}
 `;

@@ -17,9 +17,7 @@ const Home = () => {
       <PrevButton />
       <NextButton />
   </GroupButtons>
-
   </Container>
-
   )
 }
 
