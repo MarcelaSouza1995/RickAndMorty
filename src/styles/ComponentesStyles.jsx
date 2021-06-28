@@ -62,7 +62,7 @@ display: flex;
 flex-direction: column;
 color: rgb(255,255,255, 0.5);
 font-size: 20px;
-margin-top: 20%;
+margin-top: 15%;
 font-family: sans-serif;
 
 @media (max-width: 780px){
@@ -148,12 +148,12 @@ button{
 export const ImagemHeader = styled.img`
 width: 50vw;
 height:300px;
-margin:0px;
-margin-top: -40px;
+margin: -50px 0px;
+
 
 @media (max-width: 780px){
-  width: 60vw;
-  margin: -40px 20px;
+  width: 90vw;
+  margin: -70px 20px;
   padding: 0px 20px;
 }
 `;

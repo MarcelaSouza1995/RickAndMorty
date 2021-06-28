@@ -8,6 +8,7 @@ const PrevButton = () => {
   const { data, setData, count, setCount } = useContext(DataContext);
 
   const prevClick = (a) => {
+    window.scrollTo(0, 0)
     return getApi(a).then(e => setData({
       ...data,
       state: e,
